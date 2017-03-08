@@ -103,6 +103,11 @@ const addSnapshotData = (results, config, snapshotState) => {
     if (status === 'pending' || status === 'failed') {
       // if test is skipped or failed, we don't want to mark
       // its snapshots as obsolete.
+      console.log('FULLNAME!!!', fullName)
+      console.log('STATUS!!!', status)
+      console.log('snapshotState!!!', snapshotState)
+      console.log('RESULTS!!!', results)
+
       snapshotState.markSnapshotsAsCheckedForTest(fullName);
     }
   });
